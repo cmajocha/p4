@@ -13,6 +13,15 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 class User extends Model implements AuthenticatableContract,
                                     AuthorizableContract,
                                     CanResetPasswordContract
+
+public function teammember()
+    {
+      # User has many Teammembers
+      # Define a one-to-many relationship.
+      return $this->hasMany('\p4\Teammembers');
+    }
+                                
+
 {
     use Authenticatable, Authorizable, CanResetPassword;
 

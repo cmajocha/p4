@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePotentialKeepersTable extends Migration
+class CreateTeammembersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreatePotentialKeepersTable extends Migration
      */
      public function up() {
 
-       Schema::create('potential_keepers', function (Blueprint $table) {
+       Schema::create('teammembers', function (Blueprint $table) {
 
            # Increments method will make a Primary, Auto-Incrementing field.
            # Most tables start off this way
@@ -23,11 +23,11 @@ class CreatePotentialKeepersTable extends Migration
            $table->timestamps();
 
            # The rest of the fields...
-           $table->string('last_name');
-           $table->string('first_name');
-           $table->string('2015_draft_round');
-           $table->string('fantasy_team_owner');
-           $table->string('nfl_team');
+           $table->string('first');
+           $table->string('last');
+           $table->string('team');
+           $table->string('position');
+           $table->boolean('keeper');
 
            # FYI: We're skipping the 'tags' field for now; more on that later.
 
@@ -41,6 +41,6 @@ class CreatePotentialKeepersTable extends Migration
      */
      public function down()
         {
-          Schema::drop('potential_keepers');
+          Schema::drop('teammembers');
         }
 }
