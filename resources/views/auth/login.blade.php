@@ -1,8 +1,16 @@
 @extends('layouts.master')
 
+@section('title')
+    P4: Login
+@stop
+
 @section('content')
 
-    <p>Don't have an account? <a href='/register'>Register here...</a></p>
+<div class="container">
+  <div class="row">
+<div class="body-content">
+
+    <p><em>Don't have an account? <a href='/register'>Register here...</a></em></p>
 
     <h1>Login</h1>
 
@@ -36,4 +44,7 @@
         <button type='submit' class='btn btn-primary'>Login</button>
 
     </form>
+  </div>
+</div>
+</div>
 @stop

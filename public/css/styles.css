@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background:#EAEAEA;
+	width:100%;
+	margin:0;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size:1.5em;
+}
+
+.container {
+	background:#fff;
+	border: thin solid #727272;
+	-webkit-box-shadow:0px 5px 10px #1c1c1c;
+   -moz-box-shadow:0px 5px 10px #1c1c1c;
+    box-shadow:0px 5px 10px #1c1c1c;
+}
+
+.site-title {
+	background:#000;
+	color:#fff;
+	padding:1em;
+	margin:auto;
+}
+
+.body-content {
+	padding: 2em;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    background-color: yellow;
+	font-weight:bold;
+}
+
+.output {
+	background:yellow;
+	border: medium solid black;
+	padding:2em;
+	font-size:2em;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    /* display: block; */
+    width: inherit;
+}
+
+nav.navbar.navbar-inverse {
+	margin:auto;
+	margin-left:-15px;
+	border-radius:0px;
+	border-top:4px solid blue;
+}
+
+
+.flash {
+    width:100%;
+    text-align:center;
+    padding:5px;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:#00FF00;
+    font-weight:bold;
+		font-variant: small-caps;
+}
+
+.main-logo {
+  float:left;
+  padding:0px 20px 10px 0px;
+}
+
+.highlighted {
+ background-color: #ffc;
+}
+
+.red {
+    background-color: red;
+}
+
+.empty {
+	background-color: yellow;
+	padding: 6px;
+	border: thin solid #000;
+}

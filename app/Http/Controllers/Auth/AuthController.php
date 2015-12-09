@@ -49,7 +49,6 @@ class AuthController extends Controller
         return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/');
     }
 
-
     /**
      * Get a validator for an incoming registration request.
      *

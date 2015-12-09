@@ -18,7 +18,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Dalton',
          'team' => 'Cincinnati',
          'position' => 'Quarterback',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 2,
      ]);
 
@@ -29,7 +29,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Murray',
          'team' => 'Dallas',
          'position' => 'Running Back',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 2,
      ]);
 
@@ -40,7 +40,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Thomas',
          'team' => 'Denver',
          'position' => 'Wide Receiver',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 2,
      ]);
 
@@ -51,7 +51,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Green',
          'team' => 'Cincinnati',
          'position' => 'Wide Receiver',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 2,
      ]);
 
@@ -62,7 +62,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Gronkowski',
          'team' => 'New England',
          'position' => 'Tight End',
-         'keeper' => 'yes',
+         'keeper' => true,
          'user_id' => 2,
      ]);
 
@@ -73,7 +73,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Forte',
          'team' => 'Chicago',
          'position' => 'Running Back',
-         'keeper' => 'yes',
+         'keeper' => true,
          'user_id' => 2,
      ]);
 
@@ -84,7 +84,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Hilton',
          'team' => 'Indianapolis',
          'position' => 'Wide Receiver',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 2,
      ]);
 
@@ -95,7 +95,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Luck',
          'team' => 'Indianapolis',
          'position' => 'Quarterback',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 2,
      ]);
 
@@ -106,7 +106,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Edelman',
          'team' => 'New England',
          'position' => 'Wide Receiver',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 2,
      ]);
 
@@ -117,7 +117,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Carr',
          'team' => 'Oakland',
          'position' => 'Quarterback',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 2,
      ]);
 
@@ -128,7 +128,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Rawls',
          'team' => 'Seattle',
          'position' => 'Running Back',
-         'keeper' => 'yes',
+         'keeper' => true,
          'user_id' => 2,
      ]);
 
@@ -139,7 +139,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Bryant',
          'team' => 'Dallas',
          'position' => 'Wide Receiver',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 2,
      ]);
 
@@ -150,7 +150,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Roethliesberger',
          'team' => 'Pittsburgh',
          'position' => 'Quarterback',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 1,
      ]);
 
@@ -161,7 +161,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'McFadden',
          'team' => 'Oakland',
          'position' => 'Running Back',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 1,
      ]);
 
@@ -172,7 +172,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Cooks',
          'team' => 'New Orleans',
          'position' => 'Wide Reciever',
-         'keeper' => 'yes',
+         'keeper' => true,
          'user_id' => 1,
      ]);
 
@@ -183,7 +183,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Decker',
          'team' => 'NY Jets',
          'position' => 'Wide Reciever',
-         'keeper' => 'yes',
+         'keeper' => true,
          'user_id' => 1,
      ]);
 
@@ -194,7 +194,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Cobb',
          'team' => 'Green Bay',
          'position' => 'Wide Receiver',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 1,
      ]);
 
@@ -205,7 +205,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Olsen',
          'team' => 'Carolina',
          'position' => 'Tight End',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 1,
      ]);
 
@@ -216,7 +216,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Andersen',
          'team' => 'Denver',
          'position' => 'Running Back',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 1,
      ]);
 
@@ -227,7 +227,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Hillman',
          'team' => 'Denver',
          'position' => 'Running Back',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 1,
      ]);
 
@@ -238,7 +238,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Sanders',
          'team' => 'Denver',
          'position' => 'Wide Receiver',
-         'keeper' => 'no',
+         'keeper' => true,
          'user_id' => 1,
      ]);
 
@@ -249,7 +249,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Aiken',
          'team' => 'Baltimore',
          'position' => 'Wide Receiver',
-         'keeper' => 'yes',
+         'keeper' => false,
          'user_id' => 1,
      ]);
 
@@ -260,7 +260,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Amendola',
          'team' => 'New England',
          'position' => 'Wide Reciever',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 1,
      ]);
 
@@ -271,7 +271,7 @@ class TeammembersTableSeeder extends Seeder
          'last' => 'Draughn',
          'team' => 'San Francisco',
          'position' => 'Running Back',
-         'keeper' => 'no',
+         'keeper' => false,
          'user_id' => 1,
      ]);
  }

@@ -1,6 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
+<div class="container">
+  <div class="row">
+<div class="body-content">
 
     <p>Already have an account? <a href='/login'>Login here...</a></p>
 
@@ -13,6 +16,7 @@
             @endforeach
         </ul>
     @endif
+
 
     <form method='POST' action='/register'>
         {!! csrf_field() !!}
@@ -41,4 +45,7 @@
 
     </form>
 
+  </div>
+</div>
+</div>
 @stop

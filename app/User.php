@@ -14,15 +14,25 @@ class User extends Model implements AuthenticatableContract,
                                     AuthorizableContract,
                                     CanResetPasswordContract
 
-public function teammember()
-    {
-      # User has many Teammembers
-      # Define a one-to-many relationship.
-      return $this->hasMany('\p4\Teammembers');
-    }
-                                
 
 {
+    public function teammember()
+      {
+        # User has many Teammembers
+        # Define a one-to-many relationship.
+        return $this->hasMany('\p4\Teammembers');
+      }
+
+
+      public function getUsersForDropdown() {
+       $users = $this->orderby('name','ASC')->get();
+       $users_for_dropdown = [];
+       foreach($users as $user) {
+           $users_for_dropdown[$user->id] = $user->name.', '.$user->email;
+       }
+       return $users_for_dropdown;
+   }
+
     use Authenticatable, Authorizable, CanResetPassword;
 
     /**

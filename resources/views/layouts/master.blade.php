@@ -32,6 +32,11 @@
 </head>
 
 <body>
+  @if(\Session::has('flash_message'))
+     <div class='flash'>
+         {{ \Session::get('flash_message') }}
+     </div>
+ @endif
   <header>
       <div class="container">
           <div class="row">
@@ -43,14 +48,21 @@
   <div class="container-fluid">
     <div>
       <ul class="nav navbar-nav">
-        <li><a href="/">Home</a></li>
-        <li><a href="http://p1.courtney-dwa15-practice.me/">P1</a></li>
-        <li><a href="http://p2.courtney-dwa15-practice.me/">P2</a></li>
-        <li><a href="http://p3.courtney-dwa15-practice.me/">P3</a></li>
-      </ul>
-    </div>
-  </div>
+            @if(Auth::check())
+                <li><a href='/'>Home</a></li>
+                <li><a href='/teammembers/create'>Add to my Roster</a></li>
+                <li><a href='/teammembers/create'>Look up Players</a></li>
+                <li><a href='/logout'>Log out</a></li>
+            @else
+                <li><a href='/'>Home</a></li>
+                <li><a href='/login'>Log in</a></li>
+                <li><a href='/register'>Register</a></li>
+            @endif
+          </ul>
+        </div>
+      </div>
 </nav>
+
 <!-- Navigation Ends Here -->
 </div>
 </header>
