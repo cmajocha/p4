@@ -31,25 +31,27 @@
     @if(sizeof($teammembers) == 0)
         <p class="empty"><span class="glyphicon glyphicon-pushpin"></span> Your roster is empty. You can add players to your team <a href="/teammembers/create">here</p>
     @else
+<table width="100%" id="roster-table">
+  <tbody>
         @foreach($teammembers as $teammember)
-              <table width="100%" id="roster-table">
-                <tbody>
-                <tr>
+          <tr>
                   <td  width="20%">{{ $teammember->first}}</td>
                   <td width="20%">{{ $teammember->last}}</td>
                   <td width="20%">{{ $teammember->team}}</td>
                   <td width="20%">{{ $teammember->position}}</td>
-                  <td width="10%" class="keeper" id="keeper" >{{ $teammember->keeper ? 'Yes' : 'No' }}</td>
+                  <?php $keeper = $teammember->keeper ? 'Yes' : 'No' ; ?>
+                  <td class="{{$keeper ? 'highlighted' : 'Yes'}}'"width="10%">{{$keeper}}</td>
                   <td width="10%">  <a href='/teammembers/edit/{{$teammember->id}}'>Edit</a> | <a href='/teammembers/confirm-delete/{{$teammember->id}}'>Delete</a></td>
-                  <tr>
-                 </tbody>
-          </table>
+          <tr>
         @endforeach
+  </tbody>
+</table>
     @endif
 </div>
 </div>
 </div>
 
+<!--
 <script type="text/javascript">
 
 var td = document.getElementById('roster-table');
@@ -61,7 +63,7 @@ td.style.backgroundColor = green;
 td.style.backgroundColor = white;
 }
 
-</script>
+</script> !>
 
 
 @stop
