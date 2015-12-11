@@ -53,40 +53,43 @@ class TeammemberController extends Controller {
     /**
      * Responds to requests to GET /teammembers/create
      */
-    public function getCreate() {
-        $userModel = new \p4\User();
-        $users_for_dropdown = $userModel->getUsersForDropdown();
-        return view('teammembers.create')
-            ->with('users_for_dropdown',$users_for_dropdown);
-    }
-    /**
-     * Responds to requests to POST /teammembers/create
-     */
-    public function postCreate(Request $request) {
-        $this->validate(
-            $request,
-            [
-                'first' => 'required|min:5',
-                'last' => 'required|min:5',
-                'team' => 'required|min:5',
-                'position' => 'required|min:5',
-                'keeper' => 'required|min:5',
-              ]
-        );
-        # Enter teammember into the database
-        $teammember = new \p4\Teammember();
-        $teammember->first = $request->first;
-        $teammember->last = $request->last;
-        $teammember->team = $request->team;
-        $teammember->position = $request->position;
-        $teammember->keeper = $request->keeper;
-        $teammember->user_id = $request->user;
-        $teammember->user_id = \Auth::id(); # <--- NEW LINE
-        $teammember->save();
-        # Done
-        \Session::flash('flash_message','Your player was added!');
-        return redirect('/teammembers');
-    }
+       public function getCreate() {
+           $teammember = new \p4\Teammember;
+           $userModel = new \p4\User();
+           $users_for_dropdown = $userModel->getUsersForDropdown();
+           return view('teammembers.create')
+           ->with([
+               'teammember' => $teammember,
+               'users_for_dropdown' => $users_for_dropdown,
+           ]);
+       }
+       /**
+        * Responds to requests to POST /teammembers/create
+        */
+       public function postCreate(Request $request) {
+           $this->validate(
+               $request,
+               [
+                   'first' => 'required|min:5',
+                   'last' => 'required|min:5',
+                   'team' => 'required|min:5',
+                   'position' => 'required|min:5',
+                 ]
+           );
+           # Enter player into the database
+           $teammember = new \p4\Teammember();
+           $teammember->first = $request->first;
+           $teammember->user_id = $request->user;
+           $teammember->user_id = \Auth::id();
+           $teammember->last = $request->last;
+           $teammember->position = $request->position;
+           $teammember->keeper = $request->keeper;
+           $teammember->save();
+           # Done
+           \Session::flash('flash_message','Your Player was added!');
+           return redirect('/teammembers');
+       }
+
 
 
     public function getConfirmDelete($teammember_id) {
