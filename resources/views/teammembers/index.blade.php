@@ -34,13 +34,13 @@
 <table width="100%" id="roster-table">
   <tbody>
         @foreach($teammembers as $teammember)
-          <tr>
+          <tr class="{{$teammember->keeper ? 'highlighted' : 'Yes'}}">
                   <td  width="20%">{{ $teammember->first}}</td>
                   <td width="20%">{{ $teammember->last}}</td>
                   <td width="20%">{{ $teammember->team}}</td>
                   <td width="20%">{{ $teammember->position}}</td>
                   <?php $keeper = $teammember->keeper ? 'Yes' : 'No' ; ?>
-                  <td class="{{$keeper ? 'highlighted' : 'Yes'}}'"width="10%">{{$keeper}}</td>
+                  <td width="10%">{{$keeper}}</td>
                   <td width="10%">  <a href='/teammembers/edit/{{$teammember->id}}'>Edit</a> | <a href='/teammembers/confirm-delete/{{$teammember->id}}'>Delete</a></td>
           <tr>
         @endforeach

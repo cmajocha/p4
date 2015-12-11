@@ -20,11 +20,12 @@ class TeammemberController extends Controller {
     */
     public function getEdit($id = null) {
         # Get this teammember and eager load its user
-        $teammember = \p4\Teammember::with('users')->find($id);
+        $teammember = \p4\Teammember::with('user')->find($id);
         if(is_null($teammember)) {
             \Session::flash('flash_message','Teammember not found.');
             return redirect('\teammembers');
         }
+
         # Get all the possible users so we can build the teammembers owner dropdown in the view
         $userModel = new \p4\User();
         $users_for_dropdown = $userModel->getUsersForDropdown();
@@ -45,7 +46,6 @@ class TeammemberController extends Controller {
         $teammember->team = $request->team;
         $teammember->position = $request->postion;
         $teammember->keeper = $request->keeper;
-        $teammember->user_id = $request->user;
         $teammember->save();
         \Session::flash('flash_message','Your roster was updated.');
         return redirect('/teammembers/edit/'.$request->id);

@@ -29,8 +29,6 @@ class CreateTeammembersTable extends Migration
            $table->string('position');
            $table->boolean('keeper');
 
-           # FYI: We're skipping the 'tags' field for now; more on that later.
-
        });
    }
 

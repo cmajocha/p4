@@ -74,7 +74,8 @@ nav.navbar.navbar-inverse {
 }
 
 .highlighted {
- background-color: #ffc111;
+ background-color: #e1effd;
+ font-weight: bold;
 }
 
 .red {

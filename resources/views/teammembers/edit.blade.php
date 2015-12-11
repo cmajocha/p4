@@ -6,10 +6,10 @@
 
 
 @section('content')
-
+<div class="container">
+  <div class="row">
+    <div class="body-content">
     <h1>Edit my Roster</h1>
-
-    @include('errors')
 
     <form method='POST' action='/teammembers/edit'>
 
@@ -65,22 +65,24 @@
                 type='text'
                 id='position'
                 name="position"
-                value='{{teammember->position}}'
+                value='{{$teammember->position}}'
                 >
         </div>
 
         <div class='form-group'>
-            <label for='Keeper'>* Check if this player is a keeper:</label>
+            <label for='Keeper'>* Check the box if this player is a keeper:</label>
             <input
                 type='checkbox'
                 id='keeper'
                 name='keeper'
-                value='{{$teammember->keeper}}'
+                value='1'
                 >
         </div>
 
         <br>
         <button type="submit" class="btn btn-primary">Save changes</button>
     </form>
-
+</div>
+</div>
+</div>
 @stop
