@@ -2,6 +2,9 @@
 namespace p4\Http\Controllers;
 use p4\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Auth;
+use Session;
+
 class TeammemberController extends Controller {
     public function __construct() {
     }
@@ -44,49 +47,40 @@ class TeammemberController extends Controller {
         $teammember->first = $request->first;
         $teammember->last = $request->last;
         $teammember->team = $request->team;
-        $teammember->position = $request->postion;
+        $teammember->position = $request->position;
         $teammember->keeper = $request->keeper;
         $teammember->save();
         \Session::flash('flash_message','Your roster was updated.');
         return redirect('/teammembers/edit/'.$request->id);
     }
     /**
-     * Responds to requests to GET /teammembers/create
-     */
+        * Responds to requests to GET /teammembers/create
+        */
        public function getCreate() {
-           $teammember = new \p4\Teammember;
            $userModel = new \p4\User();
+           $logged = \Auth::user();
            $users_for_dropdown = $userModel->getUsersForDropdown();
            return view('teammembers.create')
-           ->with([
-               'teammember' => $teammember,
-               'users_for_dropdown' => $users_for_dropdown,
-           ]);
+               ->with('users_for_dropdown',$users_for_dropdown)
+               ->with ('logged',$logged);
        }
+
        /**
         * Responds to requests to POST /teammembers/create
         */
        public function postCreate(Request $request) {
-           $this->validate(
-               $request,
-               [
-                   'first' => 'required|min:5',
-                   'last' => 'required|min:5',
-                   'team' => 'required|min:5',
-                   'position' => 'required|min:5',
-                 ]
-           );
            # Enter player into the database
            $teammember = new \p4\Teammember();
+
            $teammember->first = $request->first;
-           $teammember->user_id = $request->user;
-           $teammember->user_id = \Auth::id();
            $teammember->last = $request->last;
+           $teammember->user_id = \Auth::id(); # <--- NEW LINE
+           $teammember->team = $request->team;
            $teammember->position = $request->position;
            $teammember->keeper = $request->keeper;
            $teammember->save();
            # Done
-           \Session::flash('flash_message','Your Player was added!');
+           \Session::flash('flash_message','Your player was added!');
            return redirect('/teammembers');
        }
 

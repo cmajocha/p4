@@ -43,12 +43,16 @@ Route::get('/', 'HelloController@getIndex');
 
 # The method uses middleware to make sure that the logged in users are the one who can access these functionalities
 Route::group(['middleware' => 'auth'], function() {
+
     Route::get('/teammembers/create', 'TeammemberController@getCreate');
     Route::post('/teammembers/create', 'TeammemberController@postCreate');
+
     Route::get('/teammembers/edit/{id?}', 'TeammemberController@getEdit');
     Route::post('/teammembers/edit', 'TeammemberController@postEdit');
+
     Route::get('/teammembers/confirm-delete/{id?}', 'TeammemberController@getConfirmDelete');
     Route::get('/teammembers/delete/{id?}', 'TeammemberController@getDoDelete');
+
     Route::get('/teammembers', 'TeammemberController@getIndex');
     Route::get('/teammembers/show/{last?,first?}', 'TeammemberController@getShow');
 });

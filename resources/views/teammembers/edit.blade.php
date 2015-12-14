@@ -59,6 +59,7 @@
                 >
         </div>
 
+
         <div class='form-group'>
             <label for='Position'>* Position:</label>
             <input
@@ -68,6 +69,7 @@
                 value='{{$teammember->position}}'
                 >
         </div>
+
 
         <div class='form-group'>
             <label for='Keeper'>* Check the box if this player is a keeper:</label>

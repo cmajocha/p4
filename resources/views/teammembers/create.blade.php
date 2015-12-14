@@ -19,7 +19,7 @@ such as a page specific styesheets.
   <div class="row">
     <div class="body-content">
     <h1>Add a new player to your roster</h1>
-
+    <hr />
     <form method='POST' action='/teammembers/create'>
 
         <input type='hidden' value='{{ csrf_token() }}' name='_token'>
@@ -46,10 +46,8 @@ such as a page specific styesheets.
          <label for='owner'>* Owner:</label>
          <select name='owner' id='owner'>
              @foreach($users_for_dropdown as $user_id => $user_name)
-
-                 {{ $selected = ($user_id == $teammember->user->id) ? 'selected' : '' }}
-
-                 <option value='{{ $user_id }}' {{ $selected }}> {{ $user_name }} </option>
+              {{ $selected = ($user_id == $logged->user) ? 'selected' : '' }}
+             <option value='{{ $user_id }}' {{ $selected }} > {{ $user_name }} </option>
              @endforeach
          </select>
      </div>
@@ -71,15 +69,11 @@ such as a page specific styesheets.
                 name="position"
                 >
         </div>
-
      <div class='form-group'>
-         <label for='Keeper'>* Check the box if this player is a keeper:</label>
-         <input
-             type='checkbox'
-             id='keeper'
-             name='keeper'
-             value='1'
-             >
+         <label for='Keeper'>* Is this player a keeper:</label>
+             <input type="radio" name="keeper" value="1" checked> Yes
+&nbsp;
+  <input type="radio" name="keeper" value="0"> No
      </div>
 
         <button type="submit" class="btn btn-primary">Add Player</button>
