@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use Goodby\CSV\Import\Standard\Interpreter;
+use Goodby\CSV\Import\Standard\LexerConfig;
 
 class DatabaseSeeder extends Seeder
 {

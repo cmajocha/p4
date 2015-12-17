@@ -8,7 +8,7 @@ use Goodby\CSV\Import\Standard\LexerConfig;
 class AllplayersTableSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeds for all players table.
      *
      * @return void
      */
