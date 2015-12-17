@@ -20,6 +20,17 @@ such as a page specific styesheets.
     <div class="body-content">
     <h1>Add a new player to your roster</h1>
     <hr />
+
+<!--Displays an error message if required form fields are not filled out -->
+<div class="error-message">
+    @if(count($errors) > 0)
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
+</div>
     <form method='POST' action='/teammembers/create'>
 
         <input type='hidden' value='{{ csrf_token() }}' name='_token'>

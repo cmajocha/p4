@@ -10,6 +10,15 @@
 
     <link href="/css/styles.css" type='text/css' rel='stylesheet'>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- JQuery for the table sorting features -->
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
+
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -22,9 +31,6 @@
     <!-- A Google Font: Open Sans -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
 <!--Yield any page specific CSS files or anything else you might want in the heading -->
     @yield('head')
@@ -32,6 +38,7 @@
 </head>
 
 <body>
+
   @if(\Session::has('flash_message'))
      <div class='flash'>
          {{ \Session::get('flash_message') }}

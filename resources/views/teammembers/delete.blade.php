@@ -15,9 +15,14 @@
         Are you sure you want to remove <strong><em>{{$teammember->first}} {{$teammember->last}}</em></strong> from your roster?
       </p>
 
+      <p>&nbsp;</p>
+
       <p>
+      <button type="button" class="btn btn-danger">
         <a href='/teammembers/delete/{{$teammember->id}}'>Drop from Roster</a>
-      </p>
+      </button>
+     </p>
+
     </div>
   </div>
 </div>

@@ -87,3 +87,20 @@ nav.navbar.navbar-inverse {
 	padding: 6px;
 	border: thin solid #000;
 }
+
+.error-message {
+	color: crimson;
+	padding: 5px;
+	font-weight: bold;
+}
+
+button.btn.btn-danger a{
+	color: #fff;
+	font-weight: bold;
+}
+
+button.btn.btn-danger a hover{
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}

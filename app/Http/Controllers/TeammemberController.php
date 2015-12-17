@@ -69,9 +69,23 @@ class TeammemberController extends Controller {
         * Responds to requests to POST /teammembers/create
         */
        public function postCreate(Request $request) {
+
+
+         $this->validate(
+                     $request,
+                     [
+                         'first' => 'required|min:2',
+                         'last' => 'required|min:2',
+                         'owner' => 'required',
+                         'team' => 'required|min:2',
+                         'position' => 'required|min:2',
+                         'keeper' => 'required|boolean',
+                       ]
+                 );
+
+
            # Enter player into the database
            $teammember = new \p4\Teammember();
-
            $teammember->first = $request->first;
            $teammember->last = $request->last;
            $teammember->user_id = \Auth::id(); # <--- NEW LINE

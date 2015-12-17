@@ -9,6 +9,7 @@
 <div class="container">
   <div class="row">
     <div class="body-content">
+
     <h1>Edit my Roster</h1>
 
     <form method='POST' action='/teammembers/edit'>
@@ -47,7 +48,7 @@
                  <option value='{{ $user_id }}' {{ $selected }}> {{ $user_name }} </option>
              @endforeach
          </select>
-     </div>
+       </div>
 
         <div class='form-group'>
             <label for='Team'>* Team:</label>
@@ -68,23 +69,21 @@
                 name="position"
                 value='{{$teammember->position}}'
                 >
-        </div>
+         </div>
 
 
-        <div class='form-group'>
-            <label for='Keeper'>* Check the box if this player is a keeper:</label>
-            <input
-                type='checkbox'
-                id='keeper'
-                name='keeper'
-                value='1'
-                >
-        </div>
+         <div class='form-group'>
+              <label for='Keeper'>* Is this player a keeper:</label>
+                 <input type="radio" name="keeper" value="1" checked> Yes
+                 &nbsp;
+                 <input type="radio" name="keeper" value="0"> No
+         </div>
 
         <br>
         <button type="submit" class="btn btn-primary">Save changes</button>
-    </form>
-</div>
-</div>
+      </form>
+
+    </div>
+  </div>
 </div>
 @stop
