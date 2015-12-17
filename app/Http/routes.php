@@ -58,6 +58,12 @@ Route::group(['middleware' => 'auth'], function() {
 });
 
 /*----------------------------------------------------
+/allplayers
+-----------------------------------------------------*/
+
+Route::get('/allplayers', 'AllplayersController@getIndex');
+
+/*----------------------------------------------------
 Debugging/Local/Misc
 -----------------------------------------------------*/
 if(App::environment('local')) {

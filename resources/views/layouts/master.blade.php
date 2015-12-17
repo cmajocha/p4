@@ -58,7 +58,7 @@
             @if(Auth::check())
                 <li><a href='/'>Home</a></li>
                 <li><a href='/teammembers/create'>Add to my Roster</a></li>
-                <li><a href='/teammembers/create'>Look up Players</a></li>
+                <li><a href='/allplayers'>Look up Players</a></li>
                 <li><a href='/logout'>Log out</a></li>
             @else
                 <li><a href='/'>Home</a></li>
