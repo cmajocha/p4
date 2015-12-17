@@ -17,7 +17,7 @@
     <div class="body-content">
     <h1>All Players <span class="glyphicon glyphicon-user"></span></h1>
     <hr />
-    <p>Want to see what players can be kept? Need to know what round draft pick you'll be surrendering? Use the chart below to get all the answers you need.</p>
+    <p>Want to see which players can be kept? Need to know what round draft pick you'll be surrendering? Use the chart below to get all the answers you need.</p>
     <hr />
 
     <table width="100%" id="all-players-table" class="tablesorter">
