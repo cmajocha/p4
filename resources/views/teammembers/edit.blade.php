@@ -51,7 +51,7 @@
        </div>
 
         <div class='form-group'>
-            <label for='Team'>* Team:</label>
+            <label for='team'>* Team:</label>
             <input
                 type='text'
                 id='team'
@@ -62,7 +62,7 @@
 
 
         <div class='form-group'>
-            <label for='Position'>* Position:</label>
+            <label for='position'>* Position:</label>
             <input
                 type='text'
                 id='position'
@@ -73,7 +73,7 @@
 
 
          <div class='form-group'>
-              <label for='Keeper'>* Is this player a keeper:</label>
+              <label>* Is this player a keeper:</label>
                  <input type="radio" name="keeper" value="1" checked> Yes
                  &nbsp;
                  <input type="radio" name="keeper" value="0"> No

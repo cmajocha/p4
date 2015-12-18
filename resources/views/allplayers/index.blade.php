@@ -23,18 +23,16 @@
 
 
     <table id="all-players-table" class="display">
-      <colgroup />
-    	<colgroup span="8" title="All PFL Players on Rosters" />
     	<thead>
     		<tr>
-          <th scope="col">Position</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">NFL Team</th>
-          <th scope="col">PFL Team</th>
-          <th scope="col">Draft Round</th>
-          <th scope="col">Keeper Eligible?</th>
-          <th scope="col">How Many Years?</th>
+          <th scope="col" colspan="1">Position</th>
+          <th scope="col" colspan="1">First</th>
+          <th scope="col" colspan="1">Last</th>
+          <th scope="col" colspan="1">NFL Team</th>
+          <th scope="col" colspan="1">PFL Team</th>
+          <th scope="col" colspan="1">Draft Round</th>
+          <th scope="col" colspan="1">Keeper Eligible?</th>
+          <th scope="col" colspan="1">How Many Years?</th>
         </tr>
       </thead>
 
