@@ -5,7 +5,8 @@
 @stop
 
 @section('head')
-    <link rel="stylesheet" href="css/tablesorter.css">
+    <!--<link rel="stylesheet" href="css/tablesorter.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
 @stop
 
 
@@ -20,30 +21,53 @@
     <p>Want to see which players can be kept? Need to know what round draft pick you'll be surrendering? Use the chart below to get all the answers you need.</p>
     <hr />
 
-    <table width="100%" id="all-players-table" class="tablesorter">
-      <thead>
-      <th width="15%">Position</th>
-      <th width="10%">First</th>
-      <th width="15%">Last</th>
-      <th width="15%">NFL Team</th>
-      <th width="10%">PFL Team</th>
-      <th width="10%">Draft Round</th>
-      <th width="10%">Keeper Eligible?</th>
-      <th width="15%">How Many Years?</th>
+
+    <table id="all-players-table" class="display">
+      <colgroup />
+    	<colgroup span="8" title="All PFL Players on Rosters" />
+    	<thead>
+    		<tr>
+          <th scope="col">Position</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">NFL Team</th>
+          <th scope="col">PFL Team</th>
+          <th scope="col">Draft Round</th>
+          <th scope="col">Keeper Eligible?</th>
+          <th scope="col">How Many Years?</th>
+        </tr>
       </thead>
+
+      <tfoot>
+        <tr>
+          <td><b>Position</b></td>
+          <td><b>First</b></td>
+          <td><b>Last</b></td>
+          <td><b>NFL Team</b></td>
+          <td><b>PFL Team</b></td>
+          <td><b>Draft Round</b></td>
+          <td><b>Keeper Eligible?</b></td>
+          <td><b>How Many Years?</b></td>
+        </tr>
+      </tfoot>
+
       <tbody>
+
         @foreach($allplayers as $allplayer)
+
           <tr>
-                  <td width="15%">{{ $allplayer->position}}</td>
-                  <td width="10%">{{ $allplayer->first}}</td>
-                  <td width="15%">{{ $allplayer->last}}</td>
-                  <td width="15%">{{ $allplayer->nflteam}}</td>
-                  <td width="10%">{{ $allplayer->plfteam}}</td>
-                  <td width="10%">{{ $allplayer->draftround}}</td>
-                  <td width="10%">{{ $allplayer->keepereligible}}</td>
-                  <td width="15%">{{ $allplayer->howmanyyears}}</td>
-          <tr>
+                  <td>{{ $allplayer->position}}</td>
+                  <td>{{ $allplayer->first}}</td>
+                  <td>{{ $allplayer->last}}</td>
+                  <td>{{ $allplayer->nflteam}}</td>
+                  <td>{{ $allplayer->plfteam}}</td>
+                  <td>{{ $allplayer->draftround}}</td>
+                  <td>{{ $allplayer->keepereligible}}</td>
+                  <td>{{ $allplayer->howmanyyears}}</td>
+          </tr>
+
         @endforeach
+
       </tbody>
     </table>
 </div>
@@ -53,6 +77,6 @@
 @stop
 
 @section('body')
-    <script type="text/javascript" src="/javascript/jquery.tablesorter.js"></script>
-    <script type="text/javascript" src="/javascript/allplayers.js"></script>
+  <script type="text/javascript" src="/javascript/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="/javascript/allplayers.js"></script>
 @stop

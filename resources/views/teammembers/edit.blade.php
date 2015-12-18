@@ -40,14 +40,14 @@
 
         <div class='form-group'>
          <label for='owner'>* Owner:</label>
-         <select name='owner' id='owner'>
-             @foreach($users_for_dropdown as $user_id => $user_name)
+           <input
+               type='text'
+               id='owner'
+               name="owner"
+               value='{{$logged->name}}'
+               readonly
+               >
 
-                 {{ $selected = ($user_id == $teammember->user->id) ? 'selected' : '' }}
-
-                 <option value='{{ $user_id }}' {{ $selected }}> {{ $user_name }} </option>
-             @endforeach
-         </select>
        </div>
 
         <div class='form-group'>

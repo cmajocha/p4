@@ -84,5 +84,9 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+        Mail::send('Auth.mails.welcome', array('name'=>Input::get('name')), function($message){
+        $message->to(Input::get('email'), Input::get('name'))->subject('Welcome to PFL Fantasy Finders Keepers!');
+    });
     }
 }

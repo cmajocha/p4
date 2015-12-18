@@ -32,11 +32,12 @@ class TeammemberController extends Controller {
         # Get all the possible users so we can build the teammembers owner dropdown in the view
         $userModel = new \p4\User();
         $users_for_dropdown = $userModel->getUsersForDropdown();
-
+        $logged = \Auth::user();
         return view('teammembers.edit')
             ->with([
                 'teammember' => $teammember,
                 'users_for_dropdown' => $users_for_dropdown,
+                'logged' => $logged,
             ]);
     }
     /**

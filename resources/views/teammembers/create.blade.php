@@ -55,13 +55,16 @@ such as a page specific styesheets.
 
         <div class='form-group'>
          <label for='owner'>* Owner:</label>
-         <select name='owner' id='owner'>
-             @foreach($users_for_dropdown as $user_id => $user_name)
-              {{ $selected = ($user_id == $logged->user) ? 'selected' : '' }}
-             <option value='{{ $user_id }}' {{ $selected }} > {{ $user_name }} </option>
-             @endforeach
-         </select>
-     </div>
+           <input
+               type='text'
+               id='owner'
+               name="owner"
+               value='{{$logged->name}}'
+               readonly
+               >
+
+       </div>
+
 
         <div class='form-group'>
             <label for='title'>* Team:</label>
