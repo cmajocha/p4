@@ -1,27 +1,22 @@
-## Laravel PHP Framework
+# DWA15 P4: PFL Fantasy Finders Keepers
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Live URL
+View the Developer's Best Friend in action: [Courtney Majocha p4](http://p4.courtney-dwa15-practice.me).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Description
+PFL Fantasy Finders Keepers is an supplemental site for my fantasy football league known as the PFL. Our league is a keeper league with some complicated rules in place for keeping players on your roster from season to season. This site would help us keep track of who can be kept, how many years you can keep them, and and the current keepers are on your roster.  
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Demo
+The demo video for my project can be found here: [Youtube - Courtney Majocha](http://laravel.com/docs).
 
-## Official Documentation
+## Details for the Teaching Team
+My site has user authentication. I have created different experiences for logged in users vs. guests to the site. Logged in users will have the ability to view their roster, add players to their team, edit the players on their team, and delete the players from their team. They will also have the ability to look at players across everyone's roster to see who the potential keepers are throughout the league. This is important, because we allow trades in the league. It will be really helpful for league members to be able to look up players to see if they'd want to target them on the trade market.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## Outside Code
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+* Bootstrap: http://getbootstrap.com/
+* Google Fonts: https://www.google.com/fonts/specimen/Open+Sans
+* Goodbye CSV: https://github.com/goodby/csv
+* JQuery Tablesorter: http://tablesorter.com/docs/
+* DataTables: https://www.datatables.net/
+* Foobooks: https://github.com/susanBuck/foobooks
